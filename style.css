@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Amatic SC';
+    src: url(assets/fonts/15467.ttf);
+}
+
+.gallery {
+    color: #ffffff;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Amastic SC', cursive;
+    display: flex;
+}
+
+.gallery__photo {
+    flex-grow: 1;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 4vw;
+    text-shadow: 0 0 5px#000000;
+}
+
+.gallery__photo--winter {
+    background-image: url(assets/images/winter.jpg);
+}
+
+.gallery__photo--lake {
+    background-image: url(assets/images/lake.jpg);
+}
+
+.gallery__photo--girl {
+    background-image: url(assets/images/girl.jpg);
+}
+
+.gallery__photo--fox {
+    background-image: url(assets/images/fox.jpg);
+}
+
+.gallery__photo--mountain {
+    background-image: url(assets/images/mountain.jpg);
+}
