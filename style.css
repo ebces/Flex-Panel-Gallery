@@ -3,24 +3,81 @@
     src: url(assets/fonts/15467.ttf);
 }
 
+body {
+    margin: 0;
+}
+
 .gallery {
     color: #ffffff;
     width: 100%;
     height: 100vh;
     font-family: 'Amastic SC', cursive;
     display: flex;
+    overflow: hidden;
 }
 
 .gallery__photo {
     flex-grow: 1;
+    flex-basis: 20%;
     background-position: center;
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    font-size: 4vw;
+    font-size: 2vw;
     text-shadow: 0 0 5px#000000;
+    cursor: pointer;
+}
+
+.gallery__photo--active {
+    animation: move .5s ease forwards;
+}
+
+.gallery__photo--active .gallery__text-content--main {
+    transition: .4s .2s;
+    font-size: 6vw;
+}
+
+.gallery__photo--deactive {
+    animation: moveBack .5s forwards;
+}
+
+.gallery__photo--deactive .gallery__text-content--main {
+    transition: .4s .2s;
+    font-size: 2vw;
+}
+
+.gallery__text-content--main {
+    margin: 500px 0;
+}
+
+@keyframes moveBack {
+    0% {
+        flex-basis: 80%;
+    }
+
+    50% {
+        flex-basis: 90%;
+    }
+
+    100% {
+        flex-basis: 20%;
+    }
+}
+
+@keyframes move {
+    0% {
+        flex-basis: 20%;
+    }
+
+    50% {
+        flex-basis: 10%;
+    }
+
+    100% {
+        flex-basis: 80%;
+    }
 }
 
 .gallery__photo--winter {
